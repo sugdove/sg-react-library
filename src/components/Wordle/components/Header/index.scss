@@ -1,0 +1,26 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 3em;
+  border-bottom: 1px #eee solid;
+  width: 100%;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.25em;
+  position:absolute;
+  top:0;
+  p {
+    margin: 0;
+  }
+}
+.info_content {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  min-width: 4em;
+}
+
+.scale_tras {
+  transform: scale(1.1);
+}
