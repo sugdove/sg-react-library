@@ -1,3 +1,4 @@
+import React from 'react'
 import './index.scss'
 import { useState, useEffect } from 'react'
 import Keyboard from './components/Keyboard/index'

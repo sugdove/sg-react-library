@@ -1,4 +1,11 @@
 {
+  "include": [
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules"
+  ],
   // "extends": "", // 继承配置文件
   "compilerOptions": {
     "jsx": "react", // 编辑器选项配置
@@ -23,6 +30,7 @@
     "noEmitOnError": true,
     // 是否默认为严格模式
     "alwaysStrict": false,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true
   }
 }
