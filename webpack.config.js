@@ -5,8 +5,8 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 module.exports = {
   entry: './index.tsx',
   output: {
-    path: _resolve('./dist'),
-    filename: 'bundle.js',
+    path: _resolve('./lib'),
+    filename: 'sg-react-library.js',
   },
   mode: 'production',
   module: {

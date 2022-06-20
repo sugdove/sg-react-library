@@ -1,14 +1,19 @@
 {
   "name": "sg-react-library",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "description": "some react components",
-  "main": "index.js",
+  "main": "./lib/sg-react-library.js",
   "scripts": {
     "serve": "webpack-dev-server",
-    "build": "webpack"
+    "build": "webpack",
+    "lib": "webpack --entry ./src/index.ts "
   },
+  "keywords": [
+    "react",
+    "typescript"
+  ],
   "author": "sg",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.18.5",
     "@babel/plugin-transform-runtime": "^7.18.5",
