@@ -3,7 +3,7 @@ const _resolve = (str) => path.resolve(__dirname, str)
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 module.exports = {
-  entry: './src/index.ts',
+  entry: './index.tsx',
   output: {
     path: _resolve('./dist'),
     filename: 'bundle.js',
@@ -26,10 +26,19 @@ module.exports = {
       },
     ],
   },
+  performance: {
+    hints: false,
+    maxEntrypointSize: 512000,
+    maxAssetSize: 512000,
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: './index.html',
     }),
     new CleanWebpackPlugin(),
   ],
+  resolve: {
+    // 设置哪些文件可以被当作模块使用
+    extensions: ['.js', '.ts', '.tsx'],
+  },
 }

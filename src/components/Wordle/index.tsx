@@ -170,30 +170,36 @@ export default function App() {
   return (
     <div className="wordle_container">
       <Header></Header>
-      <div className="box_container">
-        {boxList.map((el, index) => {
-          return (
-            <div className="box_x" key={index}>
-              {el.map((el2: any, index2: number) => {
-                return (
-                  <div
-                    className="box"
-                    key={index2}
-                    style={{
-                      backgroundColor: COLORS[el2.status],
-                      color: el2.status === 0 ? FONTCOLORS[0] : FONTCOLORS[1],
-                      ...getBorderColor(el2),
-                    }}
-                  >
-                    {el2.label}
-                  </div>
-                )
-              })}
-            </div>
-          )
-        })}
-      </div>
-      <Keyboard handleClick={click} PASSWORD={PASSWORD} keys={keys}></Keyboard>
+      <main>
+        <div className="box_container">
+          {boxList.map((el, index) => {
+            return (
+              <div className="box_x" key={index}>
+                {el.map((el2: any, index2: number) => {
+                  return (
+                    <div
+                      className="box"
+                      key={index2}
+                      style={{
+                        backgroundColor: COLORS[el2.status],
+                        color: el2.status === 0 ? FONTCOLORS[0] : FONTCOLORS[1],
+                        ...getBorderColor(el2),
+                      }}
+                    >
+                      {el2.label}
+                    </div>
+                  )
+                })}
+              </div>
+            )
+          })}
+        </div>
+        <Keyboard
+          handleClick={click}
+          PASSWORD={PASSWORD}
+          keys={keys}
+        ></Keyboard>
+      </main>
     </div>
   )
 }
